@@ -1,0 +1,25 @@
+{
+    "name": "Laravel + React Development",
+    "dockerComposeFile": "docker-compose.yml",
+    "service": "app",
+    "workspaceFolder": "/workspace",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "bmewburn.vscode-intelephense-client",
+                "xdebug.php-debug",
+                "dbaeumer.vscode-eslint",
+                "esbenp.prettier-vscode",
+                "bradlc.vscode-tailwindcss",
+                "open-southeners.laravel-pint"
+            ]
+        }
+    },
+    "forwardPorts": [
+        8000,
+        3000
+    ],
+    "remoteUser": "vscode",
+    "postCreateCommand": "chmod +x /scripts/*.sh && bash /scripts/post-create.sh",
+    "postStartCommand": "bash /scripts/post-start.sh"
+}

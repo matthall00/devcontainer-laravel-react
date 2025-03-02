@@ -1,0 +1,56 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Start Laravel API",
+            "type": "shell",
+            "command": "cd api && php artisan serve --host=0.0.0.0 --port=8000",
+            "problemMatcher": []
+        },
+        {
+            "label": "Start React Dev Server",
+            "type": "shell",
+            "command": "cd client && npm run dev",
+            "problemMatcher": []
+        },
+        {
+            "label": "Start Dev Environment",
+            "dependsOn": ["Start Laravel API", "Start React Dev Server"],
+            "problemMatcher": []
+        },
+        {
+            "label": "Laravel: Run Migrations",
+            "type": "shell",
+            "command": "cd api && php artisan migrate",
+            "problemMatcher": []
+        },
+        {
+            "label": "Laravel: Fresh Migrations",
+            "type": "shell",
+            "command": "cd api && php artisan migrate:fresh --seed",
+            "problemMatcher": []
+        },
+        {
+            "label": "Laravel: Run Tests",
+            "type": "shell",
+            "command": "cd api && php artisan test",
+            "group": {
+                "kind": "test",
+                "isDefault": true
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "React: Build",
+            "type": "shell",
+            "command": "cd client && npm run build",
+            "problemMatcher": ["$tsc"]
+        },
+        {
+            "label": "React: Lint",
+            "type": "shell",
+            "command": "cd client && npm run lint",
+            "problemMatcher": ["$eslint-stylish"]
+        }
+    ]
+}

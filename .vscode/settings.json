@@ -1,0 +1,15 @@
+{
+    "workbench.colorTheme": "Default Dark Modern",
+    "github.copilot.nextEditSuggestions.enabled": true,
+    "github.copilot.chat.search.semanticTextResults": true,
+    "github.copilot.chat.codeGeneration.instructions": [
+        {
+            "file": ".copilot-code-generation-instructions.md"
+        }
+    ],
+    "github.copilot.chat.commitMessageGeneration.instructions": [
+        {
+            "file": ".copilot-commit-message-instructions.md"
+        }
+    ],
+}
